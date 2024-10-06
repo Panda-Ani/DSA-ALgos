@@ -1,7 +1,7 @@
 class CoordinateCompression{
     map<long long, int> mp;
     vector<int> rev;
-    int cnt = 1;
+    int cnt = 0;
 
     public:
         void insert(long long num)
