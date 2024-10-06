@@ -34,6 +34,4 @@ class CoordinateCompression{
             if(ind < cnt)return rev[ind];
             return -1;
         }
-
-
 };
