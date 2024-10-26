@@ -33,7 +33,7 @@ int KthParent(int node, int k, vector<vector<int> > &parent, int maxPower)
         if(k&(1<<i))
         {
             node = parent[i][node];
-            if(node == -1)return node;
+            if(node == -1)return parent[i][node];
         }
     }
     return node;
