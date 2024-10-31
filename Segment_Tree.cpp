@@ -24,7 +24,7 @@ class segmentTree
         return 0;
     }
 
-    void build(int start, int end, int index)
+    void Build(int start, int end, int index)
     {
         // O(n)
         // build(0,n-1,1,arr,SGT);
@@ -36,8 +36,8 @@ class segmentTree
 
         int mid = (start + end) / 2;
 
-        build(start, mid, left(index));
-        build(mid + 1, end, right(index));
+        Build(start, mid, left(index));
+        Build(mid + 1, end, right(index));
         SGT[index] = merge(SGT[left(index)], SGT[right(index)]);
 
         return;
@@ -90,12 +90,12 @@ class segmentTree
     }
 
 public:
-    void init(int _n, vector<int> &a)
+    void build(int _n, vector<int> &a)
     {
         this->n = _n;
         SGT.resize(4 * n);
         arr = a;
-        build(0, n - 1, 1);
+        Build(0, n - 1, 1);
     }
 
     void update(int pos, int val)
