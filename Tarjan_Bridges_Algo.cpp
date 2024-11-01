@@ -2,6 +2,9 @@
 
 using namespace std;
 
+// tin: time of insertion of node
+// low: lowest time of insertion among all adjacent except for parent
+
 void dfs(int node, int par, vector<int> &vis, vector<int> adj[], vector<int> &tin,
         vector<int> &low, vector<vector<int> > &bridges, int &timer)
     {
